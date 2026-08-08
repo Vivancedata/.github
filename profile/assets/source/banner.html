@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap');
+  :root {
+    --canvas: hsl(0 0% 98%);
+    --ink: hsl(0 0% 9%);
+    --muted: hsl(0 0% 30%);
+    --border: hsl(0 0% 92%);
+    --brand: hsl(152 52% 20%);
+  }
+  * { margin: 0; box-sizing: border-box; }
+  body { width: 1280px; height: 640px; background: var(--canvas); font-family: 'Geist', sans-serif; overflow: hidden; position: relative; }
+  .frame { position: absolute; inset: 0; padding: 88px 96px; display: flex; flex-direction: column; justify-content: space-between; }
+  .eyebrow { font-family: 'Geist Mono', monospace; font-size: 22px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--brand); font-weight: 500; }
+  .title { font-size: 104px; font-weight: 700; letter-spacing: -0.03em; line-height: 1.02; color: var(--ink); }
+  .title .accent { color: var(--brand); }
+  .sub { font-size: 30px; color: var(--muted); max-width: 780px; line-height: 1.4; margin-top: 28px; }
+  .foot { font-family: 'Geist Mono', monospace; font-size: 20px; color: var(--muted); letter-spacing: 0.08em; }
+  svg.constellation { position: absolute; right: 0; top: 0; height: 640px; width: 520px; }
+  .mark { position: absolute; right: 84px; bottom: 64px; }
+</style>
+</head>
+<body>
+  <svg class="constellation" viewBox="0 0 520 640" fill="none" aria-hidden="true">
+    <g stroke="hsl(0 0% 9% / 0.10)" stroke-width="1.5">
+      <line x1="430" y1="90" x2="330" y2="200"/><line x1="330" y1="200" x2="452" y2="300"/>
+      <line x1="452" y1="300" x2="350" y2="430"/><line x1="350" y1="430" x2="470" y2="520"/>
+      <line x1="330" y1="200" x2="240" y2="330"/><line x1="240" y1="330" x2="350" y2="430"/>
+    </g>
+    <g fill="hsl(0 0% 9% / 0.22)">
+      <circle cx="430" cy="90" r="5"/><circle cx="452" cy="300" r="4"/>
+      <circle cx="350" cy="430" r="5"/><circle cx="470" cy="520" r="4"/>
+      <circle cx="240" cy="330" r="4"/>
+    </g>
+    <circle cx="330" cy="200" r="16" fill="hsl(152 52% 20% / 0.18)"/>
+    <circle cx="330" cy="200" r="8" fill="hsl(152 52% 20%)"/>
+  </svg>
+
+  <div class="frame">
+    <div>
+      <div class="eyebrow" id="eyebrow">// Vivancedata</div>
+      <div class="title" id="title" style="margin-top:36px">Practical AI,<br>in <span class="accent">production</span>.</div>
+      <div class="sub" id="sub">AI strategy and implementation for teams that need systems that ship — not demos.</div>
+    </div>
+    <div class="foot" id="foot">vivancedata.com</div>
+  </div>
+
+  <svg class="mark" width="120" height="120" viewBox="0 0 256 256" fill="none" aria-hidden="true">
+    <line x1="192" y1="40" x2="40" y2="192" stroke="hsl(0 0% 9%)" stroke-width="16" stroke-linecap="round"/>
+    <line x1="208" y1="128" x2="128" y2="208" stroke="hsl(152 52% 20%)" stroke-width="16" stroke-linecap="round"/>
+  </svg>
+</body>
+</html>

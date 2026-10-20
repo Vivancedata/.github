@@ -20,10 +20,12 @@ your team can maintain.
 
 ## How this org works
 
-- **Everything ships through pull requests** with required status checks —
-  build, types, lint, tests with coverage floors, Lighthouse score floors,
-  and a daily deploy watchdog that fails loudly if merges stop reaching
-  production.
+- **The product repos merge through pull requests with required status
+  checks.** `main` on `vivancedata`, `learn`, `crm` and `ui` requires build,
+  lint and type checks to pass, plus test suites with coverage floors on the
+  three apps. The site's CI also scores pages against Lighthouse floors, and
+  the site and `learn` run a daily deploy watchdog that fails loudly if merges
+  stop reaching production. The small demo repos don't have CI yet.
 - **One design language.** Colors, type scale, and spacing are tokens from
   [`ui`](https://github.com/Vivancedata/ui); the sites consume it as a
   versioned package. If a surface here looks like the website, that is on

@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="brand.css">
+<style>
+  /* LinkedIn company cover: 1128 x 191. The page logo overlaps the bottom-left
+     corner on every layout, so nothing is set in the first 250px. */
+  body { width: 1128px; height: 191px; }
+  .copy { position: absolute; left: 250px; top: 0; bottom: 37px; display: flex; flex-direction: column; justify-content: center; }
+  h1 { font-size: 31px; line-height: 1.02; white-space: nowrap; }
+  .turn { font-style: italic; font-size: 20px; color: var(--prose); margin-top: 8px; letter-spacing: -0.015em; }
+  .right { position: absolute; right: 0; top: 0; bottom: 37px; width: 196px; border-left: 1px solid var(--rule); }
+  .right .dots { position: absolute; inset: 0; }
+  .right .url { position: absolute; right: 28px; bottom: 16px; color: var(--mute); }
+  .ledger { position: absolute; left: 0; right: 0; bottom: 0; height: 37px; padding: 0 28px 0 250px; font-size: 11px; }
+</style>
+</head>
+<body>
+  <div class="copy">
+    <h1 class="serif">Someone has to answer the phone and key in the paperwork</h1>
+    <p class="serif turn">It does not have to be a person on your payroll.</p>
+  </div>
+  <div class="right">
+    <div class="dots"></div>
+    <p class="data url">vivancedata.com</p>
+  </div>
+  <div class="ledger data">
+    <span>RFI-0412</span><span>22:41</span><span>PO-2291-B</span><span>DR-88301</span><span>SUBMITTAL 03-21</span><span>07:12</span><span>IMG_4471</span><span>WO-5518</span><span>NO HEAT</span><span>PERMIT B-2209</span>
+  </div>
+</body>
+</html>

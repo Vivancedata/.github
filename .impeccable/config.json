@@ -1,0 +1,26 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "overused-font",
+        "value": "instrument serif",
+        "createdAt": "2026-11-18T20:45:46.780Z",
+        "reason": "DESIGN.md in Vivancedata/vivancedata pins this face for the nightshift world; these files render brand assets that must match the site"
+      },
+      {
+        "rule": "overused-font",
+        "value": "geist",
+        "createdAt": "2026-11-18T20:45:46.809Z",
+        "reason": "DESIGN.md in Vivancedata/vivancedata pins this face for the nightshift world; these files render brand assets that must match the site"
+      },
+      {
+        "rule": "overused-font",
+        "value": "geist mono",
+        "createdAt": "2026-11-18T20:45:46.830Z",
+        "reason": "DESIGN.md in Vivancedata/vivancedata pins this face for the nightshift world; these files render brand assets that must match the site"
+      }
+    ]
+  }
+}

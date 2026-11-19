@@ -1,4 +1,4 @@
-<img src="https://raw.githubusercontent.com/Vivancedata/.github/main/profile/assets/banner-org.png" alt="VivanceData — Practical AI, in production." width="100%">
+<img src="https://raw.githubusercontent.com/Vivancedata/.github/main/profile/assets/banner-org.png" alt="VivanceData. Someone has to answer the phone and key in the paperwork. It does not have to be a person on your payroll." width="100%">
 
 # VivanceData
 
@@ -29,7 +29,8 @@ sample data only.
 - **One design language.** Colors, type scale, and spacing are tokens from
   [`ui`](https://github.com/Vivancedata/ui); the sites consume it as a
   versioned package. If a surface here looks like the website, that is on
-  purpose.
+  purpose. The mark, banners and email signature are rendered from one source:
+  see [`BRAND.md`](https://github.com/Vivancedata/.github/blob/main/BRAND.md).
 
 ## Get in touch
 

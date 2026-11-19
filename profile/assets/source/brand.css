@@ -1,0 +1,63 @@
+/*
+ * The brand sheet every rendered asset shares: avatar, banners, LinkedIn art.
+ * These are the dark `nightshift` tokens of @vivancedata/ui written out, because
+ * a rendered PNG has no package to import. If the package moves, move these.
+ * The fonts are vendored (latin subset, SIL Open Font License) so a render
+ * needs no network.
+ */
+@font-face { font-family: 'Instrument Serif'; font-style: normal; font-weight: 400; src: url('fonts/InstrumentSerif.woff2') format('woff2'); }
+@font-face { font-family: 'Instrument Serif'; font-style: italic; font-weight: 400; src: url('fonts/InstrumentSerif-Italic.woff2') format('woff2'); }
+@font-face { font-family: 'Geist'; font-weight: 100 900; src: url('fonts/Geist.woff2') format('woff2'); }
+@font-face { font-family: 'Geist Mono'; font-weight: 100 900; src: url('fonts/GeistMono.woff2') format('woff2'); }
+
+:root {
+  --bg: hsl(60 8% 5%);
+  --card: hsl(60 6% 7%);
+  --fg: hsl(38 18% 91%);
+  --prose: hsl(40 5% 66%);
+  --mute: hsl(45 4% 52%);
+  --faint: hsl(45 4% 33%);
+  --rule: hsl(55 7% 14%);
+  --dot: hsl(50 6% 31%);
+  --brand: hsl(152 42% 58%);
+  --warning: hsl(38 78% 62%);
+  --serif: 'Instrument Serif', Georgia, serif;
+  --sans: 'Geist', system-ui, sans-serif;
+  --mono: 'Geist Mono', ui-monospace, monospace;
+}
+
+* { margin: 0; box-sizing: border-box; }
+body { background: var(--bg); color: var(--fg); font-family: var(--sans); overflow: hidden; position: relative; -webkit-font-smoothing: antialiased; }
+
+.serif { font-family: var(--serif); font-weight: 400; letter-spacing: -0.02em; }
+.label { font-family: var(--mono); font-weight: 500; font-size: 11px; letter-spacing: 0.09em; text-transform: uppercase; color: var(--mute); }
+.data { font-family: var(--mono); font-size: 13px; letter-spacing: 0.005em; font-variant-numeric: tabular-nums; }
+
+/* The dot matrix: 0.75px dots on a 12px pitch, faded top and bottom. */
+.dots {
+  background-image: radial-gradient(circle, var(--dot) 0.75px, transparent 1px);
+  background-size: 12px 12px;
+  -webkit-mask-image: linear-gradient(to bottom, transparent, #000 22%, #000 78%, transparent);
+  mask-image: linear-gradient(to bottom, transparent, #000 22%, #000 78%, transparent);
+}
+
+.lockup { display: flex; align-items: center; gap: 10px; }
+.lockup > span:last-child { font-family: var(--serif); font-size: 26px; letter-spacing: -0.01em; }
+.lockup .mark { display: block; width: 28px; height: 28px; }
+.lockup .mark svg { display: block; width: 100%; height: 100%; }
+
+/* The night log's record panel, as on the site's home page. */
+.record { background: var(--card); border: 1px solid var(--rule); }
+.record > header { display: flex; justify-content: space-between; align-items: baseline; padding: 11px 18px; border-bottom: 1px solid var(--rule); }
+.record > header .src { color: var(--mute); }
+.record > header .sep { color: var(--faint); padding: 0 8px; }
+.record blockquote { padding: 16px 18px; border-bottom: 1px solid var(--rule); color: var(--prose); font-size: 14px; line-height: 1.5; }
+.record dl > div { display: grid; grid-template-columns: 96px 1fr; gap: 12px; padding: 10px 18px; border-top: 1px solid var(--rule); align-items: center; }
+.record dl > div:first-child { border-top: 0; }
+.record dd { display: flex; align-items: center; gap: 10px; color: var(--fg); }
+.record dd svg { width: 12px; height: 12px; flex: none; fill: none; stroke: currentColor; stroke-width: 1.25; stroke-linecap: round; stroke-linejoin: round; }
+.filled { color: var(--brand); }
+.flag { color: var(--warning); }
+
+/* The ledger strip: paperwork marks between two rules. */
+.ledger { display: flex; justify-content: space-between; align-items: center; white-space: nowrap; overflow: hidden; border-top: 1px solid var(--rule); color: var(--mute); }

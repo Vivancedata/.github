@@ -2,17 +2,20 @@
 <html>
 <head>
 <meta charset="utf-8">
+<link rel="stylesheet" href="brand.css">
 <style>
-  * { margin: 0; }
-  body { width: 512px; height: 512px; background: hsl(0 0% 9%); display: grid; place-items: center; }
+  body { width: 512px; height: 512px; display: grid; place-items: center; }
+  svg { width: 420px; height: 420px; }
+  .small svg { width: 480px; height: 480px; }
 </style>
 </head>
 <body>
-  <!-- The site header mark (Icons.logo), ink canvas so it holds up at 20px
-       in GitHub chrome; the trailing slash carries the one brand accent. -->
-  <svg width="400" height="400" viewBox="0 0 256 256" fill="none">
-    <line x1="192" y1="40" x2="40" y2="192" stroke="hsl(0 0% 98%)" stroke-width="18" stroke-linecap="round"/>
-    <line x1="208" y1="128" x2="128" y2="208" stroke="hsl(152 45% 45%)" stroke-width="18" stroke-linecap="round"/>
-  </svg>
+  <script src="mark.js"></script>
+  <!-- ?cut=small renders the favicon cut. -->
+  <script>
+    const cut = new URLSearchParams(location.search).get('cut') || 'full';
+    document.body.className = cut;
+    document.body.insertAdjacentHTML('beforeend', mark(cut));
+  </script>
 </body>
 </html>
